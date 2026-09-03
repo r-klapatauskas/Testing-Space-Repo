@@ -1,17 +1,16 @@
 <?XML version="1.0"?>
 <scriptlet>
   <registration
-    progid="TestPopup.Scriptlet"
+    progid="TestFile.Scriptlet"
     classid="{00000000-0000-0000-0000-000000000001}">
   </registration>
 
   <script language="JScript">
     <![CDATA[
-      function testPopup() {
-        WScript.Echo("test");
-      }
-
-      testPopup();
+      var temp = new ActiveXObject("WScript.Shell").ExpandEnvironmentStrings("%TEMP%");
+      var file = fso.CreateTextFile(temp + "\\scttest.txt", true);
+      file.WriteLine("SCT test successful");
+      file.Close();
     ]]>
   </script>
 </scriptlet>
