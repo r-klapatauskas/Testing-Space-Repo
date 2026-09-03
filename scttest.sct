@@ -1,0 +1,17 @@
+<?XML version="1.0"?>
+<scriptlet>
+  <registration
+    progid="TestPopup.Scriptlet"
+    classid="{00000000-0000-0000-0000-000000000001}">
+  </registration>
+
+  <script language="JScript">
+    <![CDATA[
+      function testPopup() {
+        WScript.Echo("test");
+      }
+
+      testPopup();
+    ]]>
+  </script>
+</scriptlet>
